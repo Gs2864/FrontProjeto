@@ -39,13 +39,27 @@
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Entrar</button>
-
+                
             <p class="text-center mt-3">
                 <a href="#">Esqueci minha senha</a>
             </p>
 
         </form>
     </div>
+<script>
+document.getElementById("formLogin").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // pega o tipo escolhido na primeira tela
+    let tipo = localStorage.getItem("tipoUsuario");
+
+    if(tipo === "admin"){
+        window.location.href = "admin.html";
+    } else {
+        window.location.href = "inscricao.html";
+    }
+});
+</script>
 
 </body>
 </html>

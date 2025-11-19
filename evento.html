@@ -51,6 +51,9 @@
                 <!--Envio-->
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <button onclick="selecionarTipo('admin')" class="btn btn-primary">Administrador</button>
+<button onclick="selecionarTipo('aluno')" class="btn btn-success">Aluno</button>
+
                 </div>
             </form>
         </section> 
@@ -60,6 +63,12 @@
     <footer class="text-center py-3 mt-4 bg-primary text-white"> 
         <p>&copy; 2025 - Sistema de Eventos Ponto&Virgula</p> 
     </footer>
+<script>
+function selecionarTipo(tipo) {
+    localStorage.setItem("tipoUsuario", tipo); // salva a escolha
+    window.location.href = "login.html"; // vai para tela de login
+}
+</script>
 
 </body>
 </html>
